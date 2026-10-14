@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "../../data/blog";
 import BlogArticle from "./BlogArticle";
 
-const SITE = "https://landing-skywings.vercel.app";
+const SITE = "https://landing-skywings.pintuweb.id";
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));

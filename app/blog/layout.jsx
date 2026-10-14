@@ -3,7 +3,7 @@
 export const metadata = {
   title: { default: "Blog Perjalanan", template: "%s — SkyWings" },
   description: "Tips memesan tiket, berburu promo, packing, dan kabar teknologi penerbangan dari SkyWings.",
-  alternates: { canonical: "https://landing-skywings.vercel.app/blog" },
+  alternates: { canonical: "https://landing-skywings.pintuweb.id/blog" },
 };
 
 export default function BlogLayout({ children }) {

@@ -5,10 +5,10 @@ import "./globals.css";
 const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin"], weight: ["500", "700", "800"] });
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"Airline","name":"SkyWings","iataCode":"SW","description":"Maskapai antarkota fiktif dengan hub di Jakarta","url":"https://landing-skywings.vercel.app"};
+const __jsonld = {"@context":"https://schema.org","@type":"Airline","name":"SkyWings","iataCode":"SW","description":"Maskapai antarkota fiktif dengan hub di Jakarta","url":"https://landing-skywings.pintuweb.id"};
 
 export const metadata = {
-  metadataBase: new URL("https://landing-skywings.vercel.app"),
+  metadataBase: new URL("https://landing-skywings.pintuweb.id"),
   title: { default: "SkyWings — Maskapai Antarkota yang Tepat Waktu", template: "%s — SkyWings" },
   description: "SkyWings terbang dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jadwal dengan jam setempat, tarif dalam Rupiah sudah termasuk pajak, dan angka ketepatan waktu tiap bulan.",
   applicationName: "SkyWings",
@@ -16,11 +16,11 @@ export const metadata = {
   authors: [{ name: "SkyWings" }],
   creator: "SkyWings",
   publisher: "SkyWings",
-  alternates: { canonical: "https://landing-skywings.vercel.app" },
+  alternates: { canonical: "https://landing-skywings.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://landing-skywings.vercel.app",
+    url: "https://landing-skywings.pintuweb.id",
     siteName: "SkyWings",
     title: "SkyWings — Maskapai Antarkota yang Tepat Waktu",
     description: "SkyWings terbang dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jadwal dengan jam setempat, tarif dalam Rupiah sudah termasuk pajak, dan angka ketepatan waktu tiap bulan.",

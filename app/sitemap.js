@@ -1,6 +1,6 @@
 import { blogPosts } from "./data/blog";
 
-const SITE = "https://landing-skywings.vercel.app";
+const SITE = "https://landing-skywings.pintuweb.id";
 
 export default function sitemap() {
   const pages = ["/jadwal", "/layanan", "/tentang", "/kontak", "/blog"].map((p) => ({

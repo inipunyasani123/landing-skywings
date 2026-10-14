@@ -1,7 +1,7 @@
 // app/data/blog.js
 // `content` berupa HTML sederhana (h2, p, ul, ol) yang dirender di app/blog/[slug]/page.jsx
 // dan ditata oleh kelas .article-body di globals.css.
-const SITE = "https://landing-skywings.vercel.app";
+const SITE = "https://landing-skywings.pintuweb.id";
 
 export const blogPosts = [
   {

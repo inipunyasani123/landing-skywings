@@ -2,7 +2,7 @@
 
 SkyWings terbang dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jadwal dengan jam setempat, tarif dalam Rupiah sudah termasuk pajak, dan angka ketepatan waktu tiap bulan.
 
-**Demo live:** https://landing-skywings.vercel.app
+**Demo live:** https://landing-skywings.pintuweb.id
 
 ![Tangkapan layar SkyWings](public/og.jpg)
 
