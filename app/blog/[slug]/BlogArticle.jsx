@@ -13,8 +13,8 @@ export default function BlogArticle({ post, related, readingTime }) {
   return (
     <main className="px-6 pt-28 pb-24">
       <article className="mx-auto max-w-3xl">
-        <nav aria-label="Remah roti" className="pass-label flex gap-2">
-          <Link href="/blog" className="text-runway-ink hover:text-aviation">Blog</Link>
+        <nav aria-label="Remah roti" className="pass-label flex items-center gap-2">
+          <Link href="/blog" className="py-1.5 text-runway-ink hover:text-aviation">Blog</Link>
           <span aria-hidden="true">/</span>
           <span>{post.category}</span>
         </nav>
@@ -26,9 +26,9 @@ export default function BlogArticle({ post, related, readingTime }) {
         <div className="article-body mt-10" dangerouslySetInnerHTML={{ __html: post.content }} />
 
         <div aria-hidden="true" className="perforation mt-12 text-aviation" />
-        <p className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-          <span className="font-semibold text-aviation">Bagikan:</span>
-          {bagikan.map(([n, u]) => <a key={n} href={u} target="_blank" rel="noopener noreferrer" className="font-semibold text-aviation-2 underline underline-offset-4 hover:text-aviation">{n}<span className="sr-only"> (tab baru)</span></a>)}
+        <p className="mt-6 flex flex-wrap items-center gap-2 text-sm">
+          <span className="mr-1 font-semibold text-aviation">Bagikan:</span>
+          {bagikan.map(([n, u]) => <a key={n} href={u} target="_blank" rel="noopener noreferrer" className="inline-flex h-10 min-w-10 items-center justify-center rounded-lg border border-aviation/15 bg-white px-3 font-semibold text-aviation-2 hover:border-aviation hover:text-aviation">{n}<span className="sr-only"> (tab baru)</span></a>)}
         </p>
       </article>
 

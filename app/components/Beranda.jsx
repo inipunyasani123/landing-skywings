@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { BANDARA, FAQ as DAFTAR, OTP, PAPAN, RUTE, TARIF, mulaiDari, rp } from '@/lib/penerbangan';
+import { BANDARA, FAQ as DAFTAR, OTP, OTP_RENTANG, PAPAN, RUTE, TARIF, mulaiDari, rp } from '@/lib/penerbangan';
 import { blogPosts } from '@/app/data/blog';
 import CariPenerbangan from './CariPenerbangan';
 
 export function Hero() {
   return (
-    <section className="bg-gradient-to-b from-[#cfe2f5] to-sky px-6 pt-28 pb-20 md:pt-36 md:pb-28">
+    <section className="bg-gradient-to-b from-[#cfe2f5] to-sky px-6 pt-28 pb-16 md:pt-36 md:pb-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
         <div>
           <p className="pass-label text-runway-ink">Maskapai antarkota · hub Jakarta</p>
@@ -31,29 +31,33 @@ export function Hero() {
 
 export function PapanKeberangkatan() {
   return (
-    <section className="bg-aviation px-6 py-20 text-sky md:py-24">
+    <section className="bg-aviation px-6 py-16 text-sky md:py-24">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <p className="pass-label text-runway">Keberangkatan · Soekarno-Hatta (CGK)</p>
             <h2 className="mt-3 text-[2.2rem] leading-[1.06] font-extrabold text-sky md:text-5xl">Papan hari Kamis</h2>
           </div>
-          <Link href="/jadwal?dari=CGK" className="pass-label border-b border-sky/40 pb-1 text-sky hover:border-sky">Semua jadwal dari CGK</Link>
+          <Link href="/jadwal?dari=CGK" className="pass-label self-start border-b border-sky/40 py-1 text-sky hover:border-sky sm:self-auto">Semua jadwal dari CGK</Link>
         </div>
-        <div className="mt-10 overflow-x-auto rounded-xl bg-[#071a33] p-2" tabIndex={0} role="region" aria-label="Papan keberangkatan CGK">
-          <table className="w-full min-w-[40rem] border-collapse text-left">
+        {/* Ponsel: kolom penerbangan & gerbang dilipat ke bawah nama tujuan, jadi papan muat tanpa digeser. */}
+        <div className="mt-8 rounded-xl bg-[#071a33] p-1.5 sm:mt-10 sm:overflow-x-auto sm:p-2" tabIndex={0} role="region" aria-label="Papan keberangkatan CGK">
+          <table className="w-full border-collapse text-left sm:min-w-[40rem]">
             <caption className="sr-only">Contoh papan keberangkatan SkyWings dari Jakarta pada hari Kamis</caption>
             <thead>
-              <tr>{['Jam', 'Penerbangan', 'Tujuan', 'Gerbang', 'Status'].map((h) => <th key={h} scope="col" className="pass-label px-4 py-3 text-sky/70">{h}</th>)}</tr>
+              <tr>{[['Jam', ''], ['Penerbangan', 'hidden sm:table-cell'], ['Tujuan', ''], ['Gerbang', 'hidden sm:table-cell'], ['Status', 'text-right sm:text-left']].map(([h, c]) => <th key={h} scope="col" className={`pass-label px-3 py-3 text-sky/70 sm:px-4 ${c}`}>{h}</th>)}</tr>
             </thead>
-            <tbody className="pass-code text-lg">
+            <tbody className="pass-code text-base sm:text-lg">
               {PAPAN.map((f) => (
                 <tr key={f.no} className="border-t border-sky/10">
-                  <td className="px-4 py-3 text-[#ffd166]">{f.berangkat}</td>
-                  <td className="px-4 py-3">{f.no}</td>
-                  <td className="px-4 py-3">{BANDARA[f.ke].kota.toUpperCase()} <span className="text-sky/60">{f.ke}</span></td>
-                  <td className="px-4 py-3">{f.gerbang}</td>
-                  <td className={`px-4 py-3 ${f.status === 'Boarding' ? 'text-[#7cd4ff]' : f.status === 'Berangkat' ? 'text-sky/60' : 'text-[#8ee6a6]'}`}>{f.status.toUpperCase()}</td>
+                  <td className="px-3 py-3 align-top text-[#ffd166] sm:px-4 sm:align-middle">{f.berangkat}</td>
+                  <td className="hidden px-4 py-3 sm:table-cell">{f.no}</td>
+                  <td className="px-3 py-3 sm:px-4">
+                    {BANDARA[f.ke].kota.toUpperCase()} <span className="text-sky/60">{f.ke}</span>
+                    <span className="mt-0.5 block text-xs text-sky/70 sm:hidden">{f.no} · gerbang {f.gerbang}</span>
+                  </td>
+                  <td className="hidden px-4 py-3 sm:table-cell">{f.gerbang}</td>
+                  <td className={`px-3 py-3 text-right align-top text-sm sm:px-4 sm:text-left sm:align-middle sm:text-lg ${f.status === 'Boarding' ? 'text-[#7cd4ff]' : f.status === 'Berangkat' ? 'text-sky/60' : 'text-[#8ee6a6]'}`}>{f.status.toUpperCase()}</td>
                 </tr>
               ))}
             </tbody>
@@ -67,24 +71,24 @@ export function PapanKeberangkatan() {
 
 export function Rute() {
   return (
-    <section className="px-6 py-20 md:py-28">
+    <section className="px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
         <p className="pass-label text-runway-ink">Rute</p>
         <h2 className="mt-4 max-w-2xl text-[2.2rem] leading-[1.06] font-extrabold text-aviation md:text-5xl">Empat tujuan dari Jakarta</h2>
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-6 md:mt-12 lg:grid-cols-4">
           {RUTE.map((r) => (
             <li key={r.kode}>
-              <Link href={`/jadwal?dari=CGK&ke=${r.kode}`} className="group block overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg">
+              <Link href={`/jadwal?dari=CGK&ke=${r.kode}`} className="group block h-full overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image src={r.foto} alt={r.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <Image src={r.foto} alt={r.alt} fill sizes="(max-width: 1024px) 50vw, 280px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
-                <div className="p-5">
-                  <p className="flex items-baseline justify-between">
-                    <span className="text-xl font-bold text-aviation">{r.judul}</span>
-                    <span className="pass-code text-slate-ink">CGK → {r.kode}</span>
+                <div className="p-3.5 sm:p-5">
+                  <p className="flex flex-wrap items-baseline justify-between gap-x-3">
+                    <span className="text-lg font-bold text-aviation sm:text-xl">{r.judul}</span>
+                    <span className="pass-code text-sm text-slate-ink sm:text-base">CGK → {r.kode}</span>
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed">{r.ket}</p>
-                  <p className="mt-4 text-sm">mulai <strong className="text-aviation">{rp(mulaiDari('CGK', r.kode))}</strong></p>
+                  <p className="mt-2 hidden text-sm leading-relaxed sm:block">{r.ket}</p>
+                  <p className="mt-2 text-sm sm:mt-4">mulai <strong className="whitespace-nowrap text-aviation">{rp(mulaiDari('CGK', r.kode))}</strong></p>
                 </div>
               </Link>
             </li>
@@ -99,14 +103,14 @@ export function Rute() {
 export function Tarif() {
   const dasar = mulaiDari('CGK', 'DPS');
   return (
-    <section className="bg-white px-6 py-20 md:py-28">
+    <section className="bg-white px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <p className="pass-label text-runway-ink">Tarif · contoh CGK → DPS</p>
             <h2 className="mt-4 max-w-2xl text-[2.2rem] leading-[1.06] font-extrabold text-aviation md:text-5xl">Tiga tarif, isinya tertulis jelas</h2>
           </div>
-          <Link href="/layanan" className="pass-label shrink-0 border-b-2 border-aviation pb-1 text-aviation">Rincian tarif & bagasi</Link>
+          <Link href="/layanan" className="pass-label shrink-0 self-start border-b-2 border-aviation py-1 text-aviation sm:self-auto">Rincian tarif & bagasi</Link>
         </div>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
           {TARIF.map((t) => (
@@ -133,7 +137,7 @@ export function Tarif() {
 export function TepatWaktu() {
   const min = 80;
   return (
-    <section className="px-6 py-20 md:py-28">
+    <section className="px-6 py-16 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <div>
           <p className="pass-label text-runway-ink">Ketepatan waktu</p>
@@ -150,7 +154,7 @@ export function TepatWaktu() {
               </li>
             ))}
           </ul>
-          <figcaption className="mt-5 border-t border-aviation/10 pt-4 text-sm">Sumbu dimulai dari 80%. Angka contoh purwarupa desain, April–September 2026.</figcaption>
+          <figcaption className="mt-5 border-t border-aviation/10 pt-4 text-sm">Sumbu dimulai dari 80%. Angka contoh purwarupa desain, {OTP_RENTANG}.</figcaption>
         </figure>
       </div>
     </section>
@@ -159,7 +163,7 @@ export function TepatWaktu() {
 
 export function FAQ() {
   return (
-    <section className="bg-white px-6 py-20 md:py-28">
+    <section className="bg-white px-6 py-16 md:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
         <div>
           <p className="pass-label text-runway-ink">Pertanyaan</p>
@@ -184,14 +188,14 @@ export function FAQ() {
 export function BlogTeaser() {
   const tampil = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
   return (
-    <section className="px-6 py-20 md:py-28">
+    <section className="px-6 py-16 md:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <p className="pass-label text-runway-ink">Blog</p>
             <h2 className="mt-4 text-[2.2rem] leading-[1.06] font-extrabold text-aviation md:text-5xl">Catatan sebelum terbang</h2>
           </div>
-          <Link href="/blog" className="pass-label shrink-0 border-b-2 border-aviation pb-1 text-aviation">Semua artikel</Link>
+          <Link href="/blog" className="pass-label shrink-0 self-start border-b-2 border-aviation py-1 text-aviation sm:self-auto">Semua artikel</Link>
         </div>
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
           {tampil.map((p) => (

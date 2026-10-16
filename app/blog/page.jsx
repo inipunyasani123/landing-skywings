@@ -12,7 +12,7 @@ export default function Blog() {
       <div className="mx-auto max-w-6xl">
         <p className="pass-label text-runway-ink">Blog perjalanan</p>
         <h1 className="mt-4 max-w-3xl text-[2.7rem] leading-[1.02] font-extrabold text-aviation md:text-6xl">Catatan sebelum terbang</h1>
-        <p className="mt-5 max-w-xl text-lg leading-relaxed">Cara memesan, berburu harga, packing, dan apa yang terjadi di balik layar penerbangan.</p>
+        <p className="mt-5 max-w-xl text-lg leading-relaxed">Cara memesan, membaca pola harga, mengemas bagasi kabin, dan apa yang terjadi di balik layar penerbangan.</p>
 
         <Link href={`/blog/${utama.slug}`} className="group mt-12 grid overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
           <div className="relative aspect-[16/10] md:aspect-auto">

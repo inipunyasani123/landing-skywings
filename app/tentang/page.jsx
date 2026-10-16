@@ -1,5 +1,8 @@
 import Image from "next/image";
-import { ARMADA, BANDARA, JADWAL, OTP, SITE } from "@/lib/penerbangan";
+import { ARMADA, BANDARA, JADWAL, OTP, OTP_TERAKHIR, SITE } from "@/lib/penerbangan";
+
+// Label bulan ketepatan waktu dihitung dari tanggal hari ini; bangun ulang harian.
+export const revalidate = 86400;
 
 export const metadata = {
   title: "Tentang & Armada",
@@ -63,7 +66,7 @@ export default function Tentang() {
             </li>
           ))}
         </ul>
-        <p className="mt-10 text-sm">Ketepatan waktu September 2026: {OTP[OTP.length - 1][1].toLocaleString("id-ID")}%. SkyWings adalah maskapai fiktif; semua angka di halaman ini contoh purwarupa desain.</p>
+        <p className="mt-10 text-sm">Ketepatan waktu {OTP_TERAKHIR}: {OTP[OTP.length - 1][1].toLocaleString("id-ID")}%. SkyWings adalah maskapai fiktif; semua angka di halaman ini contoh purwarupa desain.</p>
       </section>
     </main>
   );

@@ -3,7 +3,7 @@ import { LAYANAN_KHUSUS, SITE, TARIF, mulaiDari, rp } from "@/lib/penerbangan";
 
 export const metadata = {
   title: "Tarif, Bagasi & Layanan Khusus",
-  description: "Perbandingan tarif Hemat, Fleksibel, dan Bisnis SkyWings: bagasi, ubah jadwal, pengembalian dana, pilih kursi — plus check-in dan layanan untuk kursi roda, bayi, dan ibu hamil.",
+  description: "Tarif Hemat, Fleksibel, dan Bisnis SkyWings: bagasi, ubah jadwal, pengembalian dana, pilih kursi, plus layanan kursi roda, bayi, dan ibu hamil.",
   alternates: { canonical: `${SITE}/layanan` },
 };
 

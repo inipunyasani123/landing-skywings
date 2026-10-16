@@ -3,7 +3,7 @@ import JadwalSaring from "../components/JadwalSaring";
 
 export const metadata = {
   title: "Jadwal & Harga",
-  description: "Jadwal penerbangan SkyWings dari Jakarta, Surabaya, Denpasar, Yogyakarta, Lombok, dan Labuan Bajo — jam berangkat dan tiba waktu setempat, hari terbang, dan harga mulai.",
+  description: "Delapan belas penerbangan langsung SkyWings antara Jakarta, Surabaya, Bali, Yogyakarta, Lombok, dan Labuan Bajo: jam setempat, hari terbang, harga mulai.",
   alternates: { canonical: `${SITE}/jadwal` },
 };
 

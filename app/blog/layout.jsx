@@ -2,7 +2,7 @@
 // Halaman artikel menimpanya lewat generateMetadata di [slug]/page.jsx.
 export const metadata = {
   title: { default: "Blog Perjalanan", template: "%s — SkyWings" },
-  description: "Tips memesan tiket, berburu promo, packing, dan kabar teknologi penerbangan dari SkyWings.",
+  description: "Panduan memesan tiket, pola harga, bagasi kabin 7 kg, dan cerita di balik layar penerbangan SkyWings.",
   alternates: { canonical: "https://landing-skywings.pintuweb.id/blog" },
 };
 

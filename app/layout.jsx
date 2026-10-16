@@ -10,7 +10,7 @@ const __jsonld = {"@context":"https://schema.org","@type":"Airline","name":"SkyW
 export const metadata = {
   metadataBase: new URL("https://landing-skywings.pintuweb.id"),
   title: { default: "SkyWings — Maskapai Antarkota yang Tepat Waktu", template: "%s — SkyWings" },
-  description: "SkyWings terbang dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jadwal dengan jam setempat, tarif dalam Rupiah sudah termasuk pajak, dan angka ketepatan waktu tiap bulan.",
+  description: "SkyWings terbang langsung dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jam setempat, tarif termasuk pajak, dan angka tepat waktu tiap bulan.",
   applicationName: "SkyWings",
   keywords: ["tiket pesawat jakarta bali", "jadwal penerbangan labuan bajo", "tiket pesawat yogyakarta", "maskapai tepat waktu", "harga tiket pesawat lombok"],
   authors: [{ name: "SkyWings" }],
@@ -23,13 +23,13 @@ export const metadata = {
     url: "https://landing-skywings.pintuweb.id",
     siteName: "SkyWings",
     title: "SkyWings — Maskapai Antarkota yang Tepat Waktu",
-    description: "SkyWings terbang dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jadwal dengan jam setempat, tarif dalam Rupiah sudah termasuk pajak, dan angka ketepatan waktu tiap bulan.",
+    description: "SkyWings terbang langsung dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jam setempat, tarif termasuk pajak, dan angka tepat waktu tiap bulan.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "SkyWings — Maskapai Antarkota yang Tepat Waktu" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "SkyWings — Maskapai Antarkota yang Tepat Waktu",
-    description: "SkyWings terbang dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jadwal dengan jam setempat, tarif dalam Rupiah sudah termasuk pajak, dan angka ketepatan waktu tiap bulan.",
+    description: "SkyWings terbang langsung dari Jakarta ke Bali, Yogyakarta, Lombok, dan Labuan Bajo. Jam setempat, tarif termasuk pajak, dan angka tepat waktu tiap bulan.",
     images: ["/og.jpg"],
   },
   robots: {

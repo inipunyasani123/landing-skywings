@@ -3,7 +3,7 @@ import FormKontak from "../components/FormKontak";
 
 export const metadata = {
   title: "Kontak & Bantuan",
-  description: "Hubungi layanan pelanggan SkyWings untuk pemesanan, bagasi, perubahan jadwal, pengembalian dana, dan layanan khusus. Siapkan kode pemesanan enam huruf Anda.",
+  description: "Hubungi layanan pelanggan SkyWings untuk pemesanan, bagasi, ubah jadwal, pengembalian dana, dan layanan khusus. Siapkan kode pemesanan enam huruf.",
   alternates: { canonical: `${SITE}/kontak` },
 };
 

@@ -1,6 +1,9 @@
 import Link from 'next/link';
+import MenuPonsel from './MenuPonsel';
 
 const NAV = [['/jadwal', 'Jadwal & harga'], ['/layanan', 'Tarif & bagasi'], ['/tentang', 'Tentang'], ['/blog', 'Blog'], ['/kontak', 'Kontak']];
+// Kode kecil di menu ponsel, gaya label pas naik.
+const NAV_PONSEL = [['/#cari', 'Cari penerbangan', 'CGK → DPS'], ['/jadwal', 'Jadwal & harga', '18 penerbangan'], ['/layanan', 'Tarif & bagasi', 'Hemat · Bisnis'], ['/tentang', 'Tentang & armada', '12 pesawat'], ['/blog', 'Blog', 'Catatan'], ['/kontak', 'Kontak & bantuan', 'Kode 6 huruf']];
 
 function Logo({ terang = false }) {
   return (
@@ -14,21 +17,14 @@ function Logo({ terang = false }) {
 export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-aviation/10 bg-sky/92 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6">
-        <Link href="/" aria-label="SkyWings, ke beranda"><Logo /></Link>
-        <nav aria-label="Navigasi utama" className="hidden items-center gap-7 lg:flex">
-          {NAV.map(([h, l]) => <Link key={h} href={h} className="text-sm font-semibold text-slate-ink hover:text-aviation">{l}</Link>)}
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:px-6">
+        <Link href="/" aria-label="SkyWings, ke beranda" className="py-2"><Logo /></Link>
+        <nav aria-label="Navigasi utama" className="hidden items-center gap-1 lg:flex">
+          {NAV.map(([h, l]) => <Link key={h} href={h} className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-ink hover:bg-aviation/5 hover:text-aviation">{l}</Link>)}
         </nav>
-        <div className="flex items-center gap-3">
-          <Link href="/#cari" className="hidden rounded-lg bg-runway-ink px-4 py-2.5 text-sm font-semibold text-white hover:bg-aviation sm:inline-flex">Cari penerbangan</Link>
-          <details className="group relative lg:hidden">
-            <summary className="flex cursor-pointer list-none items-center rounded-lg border border-aviation/20 px-3 py-2 text-sm font-semibold text-aviation [&::-webkit-details-marker]:hidden">
-              <span className="group-open:hidden">Menu</span><span className="hidden group-open:inline">Tutup</span>
-            </summary>
-            <nav aria-label="Navigasi seluler" className="absolute right-0 mt-2 w-56 rounded-xl border border-aviation/10 bg-white p-2 shadow-xl">
-              {[['/#cari', 'Cari penerbangan'], ...NAV].map(([h, l]) => <Link key={h} href={h} className="block rounded-lg px-3 py-2.5 font-semibold text-aviation hover:bg-sky-2">{l}</Link>)}
-            </nav>
-          </details>
+        <div className="flex items-center gap-2">
+          <Link href="/#cari" className="hidden h-11 items-center rounded-lg bg-runway-ink px-4 text-sm font-semibold text-white hover:bg-aviation sm:inline-flex">Cari penerbangan</Link>
+          <MenuPonsel tautan={NAV_PONSEL} />
         </div>
       </div>
     </header>
@@ -38,24 +34,24 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="bg-aviation px-6 text-sky">
-      <div className="mx-auto grid max-w-6xl gap-10 py-14 md:grid-cols-[minmax(0,1.4fr)_repeat(2,minmax(0,1fr))]">
-        <div>
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 py-14 md:grid-cols-[minmax(0,1.4fr)_repeat(2,minmax(0,1fr))]">
+        <div className="col-span-2 md:col-span-1">
           <Logo terang />
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-sky/80">Maskapai antarkota dengan hub di Jakarta. Enam bandara, delapan belas penerbangan terjadwal, satu janji: berangkat tepat waktu.</p>
         </div>
         <nav aria-label="Terbang">
           <p className="pass-label mb-4 text-sky/80">Terbang</p>
-          <ul className="space-y-2.5 text-sm text-sky/80">
-            <li><Link href="/jadwal" className="hover:text-sky">Jadwal & harga</Link></li>
-            <li><Link href="/layanan" className="hover:text-sky">Tarif, bagasi & layanan khusus</Link></li>
-            <li><Link href="/blog" className="hover:text-sky">Blog perjalanan</Link></li>
+          <ul className="space-y-1 text-sm text-sky/80">
+            <li><Link href="/jadwal" className="inline-block py-1.5 hover:text-sky">Jadwal & harga</Link></li>
+            <li><Link href="/layanan" className="inline-block py-1.5 hover:text-sky">Tarif, bagasi & layanan khusus</Link></li>
+            <li><Link href="/blog" className="inline-block py-1.5 hover:text-sky">Blog perjalanan</Link></li>
           </ul>
         </nav>
         <nav aria-label="Perusahaan">
           <p className="pass-label mb-4 text-sky/80">Perusahaan</p>
-          <ul className="space-y-2.5 text-sm text-sky/80">
-            <li><Link href="/tentang" className="hover:text-sky">Tentang & armada</Link></li>
-            <li><Link href="/kontak" className="hover:text-sky">Kontak & bantuan</Link></li>
+          <ul className="space-y-1 text-sm text-sky/80">
+            <li><Link href="/tentang" className="inline-block py-1.5 hover:text-sky">Tentang & armada</Link></li>
+            <li><Link href="/kontak" className="inline-block py-1.5 hover:text-sky">Kontak & bantuan</Link></li>
           </ul>
         </nav>
       </div>
