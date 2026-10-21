@@ -200,10 +200,15 @@ export function BlogTeaser() {
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
           {tampil.map((p) => (
             <li key={p.slug}>
-              <Link href={`/blog/${p.slug}`} className="block h-full rounded-2xl bg-white p-6 shadow-sm hover:shadow-lg">
+              <Link href={`/blog/${p.slug}`} className="block h-full overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-lg">
+                <span className="relative block aspect-[16/9]">
+                  <Image src={p.image} alt="" fill sizes="(min-width: 768px) 22rem, 100vw" className="object-cover" />
+                </span>
+                <span className="block p-6">
                 <span className="pass-label text-runway-ink">{p.category}</span>
                 <span className="mt-3 block text-xl font-bold text-aviation">{p.title}</span>
                 <span className="mt-2 block text-sm leading-relaxed">{p.excerpt}</span>
+                </span>
               </Link>
             </li>
           ))}

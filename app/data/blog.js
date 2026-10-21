@@ -152,7 +152,7 @@ export const blogPosts = [
 <h2>Bagasi yang bisa dilacak</h2>
 <p>Setiap label bagasi dipindai di konter, di ban berjalan, dan di pintu pesawat. Kalau tas Anda tertinggal, kami tahu titik terakhir ia terlihat.</p>
 `,
-    image: "/images/rute/ruang-tunggu.webp",
+    image: "/images/armada/armada-sampul.webp",
     date: "2026-09-17",
     category: "Di balik layar",
     url: `${SITE}/blog/teknologi-terbaru`,

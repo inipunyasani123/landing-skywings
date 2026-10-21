@@ -42,14 +42,13 @@ Buka http://localhost:3000. Untuk build produksi: `npm run build` lalu `npm star
 
 ## Kredit foto
 
-Semua foto berlisensi **CC0 (domain publik)** dari rawpixel, Wikimedia Commons, dan StockSnap; dipotong dan diperkecil. Pesawat di foto bukan milik SkyWings.
+Semua foto berlisensi **CC0 (domain publik)** dari rawpixel, Wikimedia Commons, dan StockSnap; dipotong dan diperkecil. Pesawat di foto bukan milik SkyWings. Gambar armada (`public/images/armada/armada.webp`) adalah ilustrasi livery buatan sendiri. Daftar lengkap: `public/images/SUMBER.md`.
 
 - `public/images/rute/bali.webp` — "Free Bali temple lake view" ([sumber](https://www.rawpixel.com/image/5916690/image-public-domain-water-free))
 - `public/images/rute/yogyakarta.webp` — "Free Prambanan Temple image" ([sumber](https://www.rawpixel.com/image/5904361/photo-image-public-domain-free-travel))
 - `public/images/rute/lombok.webp` — "Beach in Lombok 8" oleh Lasthib ([sumber](https://commons.wikimedia.org/w/index.php?curid=52365842))
 - `public/images/rute/labuan-bajo.webp` — "Labuan bajo" oleh Lasthib ([sumber](https://commons.wikimedia.org/w/index.php?curid=52364027))
 - `public/images/rute/pesawat-gerbang.webp` — "Airplane Loading" oleh World Travel Adventures ([sumber](https://stocksnap.io/photo/airplane-loading-DDSTKU4W97))
-- `public/images/rute/ruang-tunggu.webp` — "Airport Terminal" oleh Matt Moloney ([sumber](https://stocksnap.io/photo/airport-terminal-CTIWBOSEN7))
 
 ---
 

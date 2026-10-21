@@ -50,8 +50,8 @@ export default function Tentang() {
             </ul>
           </div>
           <figure>
-            <Image src="/images/rute/pesawat-gerbang.webp" alt="Pesawat jet terparkir di gerbang bandara sementara petugas darat memuat bagasi" width={960} height={640} className="h-auto w-full rounded-2xl" />
-            <figcaption className="mt-3 text-xs text-sky/70">Foto suasana: World Travel Adventures, StockSnap (CC0). Bukan pesawat SkyWings.</figcaption>
+            <Image src="/images/armada/armada.webp" alt="Ilustrasi profil samping Airbus A320neo dan ATR 72-600 berlivery SkyWings: badan putih, perut biru tua, garis jingga, logo pesawat jingga di ekor" width={1500} height={1100} sizes="(min-width: 1152px) 34rem, (min-width: 1024px) 46vw, 100vw" className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs text-sky/70">Ilustrasi livery armada SkyWings, maskapai fiktif. Atas: A320neo · bawah: ATR 72-600.</figcaption>
           </figure>
         </div>
       </section>
