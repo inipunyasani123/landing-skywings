@@ -42,7 +42,7 @@ export default function Blog() {
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-xs">Foto artikel: rawpixel, Wikimedia Commons, dan StockSnap (CC0). Gambar armada: ilustrasi livery SkyWings.</p>
+        <p className="mt-6 text-xs">Foto artikel: rawpixel, Wikimedia Commons, dan StockSnap (CC0). Pesawat dalam foto hanya contoh, bukan milik SkyWings (maskapai fiktif).</p>
       </div>
     </main>
   );

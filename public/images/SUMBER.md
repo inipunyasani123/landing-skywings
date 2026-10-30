@@ -10,6 +10,7 @@ SkyWings adalah maskapai fiktif; pesawat di foto bukan milik SkyWings. Foto hany
 | `rute/labuan-bajo.webp` | Labuan bajo | Lasthib | https://commons.wikimedia.org/w/index.php?curid=52364027 | CC0 |
 | `rute/pesawat-gerbang.webp` | Airplane Loading | World Travel Adventures | https://stocksnap.io/photo/airplane-loading-DDSTKU4W97 | CC0 1.0 |
 
-## Ilustrasi buatan sendiri
-- `armada/armada.webp` dan `armada/armada-sampul.webp` (potongan 16:9 untuk sampul artikel) — profil samping A320neo dan ATR 72-600 dengan livery SkyWings (registrasi PK-SWA/PK-SWT
-  fiktif), digambar sebagai SVG lalu diekspor ke WebP.
+| `armada/armada-atr.webp`, `armada/armada-sampul.webp` | Atr 72-600 Front view | 9k32Strela | https://commons.wikimedia.org/wiki/File:Atr_72-600_Front_view.jpg | CC0 |
+| `armada/armada-a320-kabin.webp` | Airbus A320neo cabin | Ziongarage | https://commons.wikimedia.org/wiki/File:Airbus_A320neo_cabin.jpg | CC0 |
+
+Sampul artikel armada adalah potongan lain dari foto ATR yang sama. Pesawat di foto bukan milik SkyWings dan tidak memperlihatkan nama maskapai. Tidak ada ilustrasi objek tersisa.

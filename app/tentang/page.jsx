@@ -49,9 +49,16 @@ export default function Tentang() {
               ))}
             </ul>
           </div>
-          <figure>
-            <Image src="/images/armada/armada.webp" alt="Ilustrasi profil samping Airbus A320neo dan ATR 72-600 berlivery SkyWings: badan putih, perut biru tua, garis jingga, logo pesawat jingga di ekor" width={1500} height={1100} sizes="(min-width: 1152px) 34rem, (min-width: 1024px) 46vw, 100vw" className="h-auto w-full rounded-2xl" />
-            <figcaption className="mt-3 text-xs text-sky/70">Ilustrasi livery armada SkyWings, maskapai fiktif. Atas: A320neo · bawah: ATR 72-600.</figcaption>
+          <figure className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <div>
+              <Image src="/images/armada/armada-atr.webp" alt="Pesawat turboprop ATR 72-600 putih dari depan di apron, dua baling-baling dan pegunungan di kejauhan" width={1500} height={1000} sizes="(min-width: 1152px) 34rem, (min-width: 1024px) 46vw, (min-width: 640px) 50vw, 100vw" className="h-auto w-full rounded-2xl" />
+              <p className="mt-2 text-xs text-sky/70">ATR 72-600, untuk rute pendek dari Surabaya.</p>
+            </div>
+            <div>
+              <Image src="/images/armada/armada-a320-kabin.webp" alt="Kabin Airbus A320neo dilihat dari lorong: kabin bagasi atas dan deretan kursi dengan lampu hijau lembut" width={1500} height={1000} sizes="(min-width: 1152px) 34rem, (min-width: 1024px) 46vw, (min-width: 640px) 50vw, 100vw" className="h-auto w-full rounded-2xl" />
+              <p className="mt-2 text-xs text-sky/70">Kabin Airbus A320neo, untuk rute dari dan ke Jakarta.</p>
+            </div>
+            <figcaption className="text-xs text-sky/70 sm:col-span-2 lg:col-span-1">Foto pesawat contoh (CC0); bukan milik SkyWings, maskapai fiktif.</figcaption>
           </figure>
         </div>
       </section>

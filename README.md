@@ -42,7 +42,7 @@ Buka http://localhost:3000. Untuk build produksi: `npm run build` lalu `npm star
 
 ## Kredit foto
 
-Semua foto berlisensi **CC0 (domain publik)** dari rawpixel, Wikimedia Commons, dan StockSnap; dipotong dan diperkecil. Pesawat di foto bukan milik SkyWings. Gambar armada (`public/images/armada/armada.webp`) adalah ilustrasi livery buatan sendiri. Daftar lengkap: `public/images/SUMBER.md`.
+Semua foto berlisensi **CC0 (domain publik)** dari rawpixel, Wikimedia Commons, dan StockSnap; dipotong dan diperkecil. Pesawat di foto bukan milik SkyWings. Foto armada (`public/images/armada/`) juga CC0 dan tidak memperlihatkan nama maskapai. Daftar lengkap: `public/images/SUMBER.md`.
 
 - `public/images/rute/bali.webp` — "Free Bali temple lake view" ([sumber](https://www.rawpixel.com/image/5916690/image-public-domain-water-free))
 - `public/images/rute/yogyakarta.webp` — "Free Prambanan Temple image" ([sumber](https://www.rawpixel.com/image/5904361/photo-image-public-domain-free-travel))
