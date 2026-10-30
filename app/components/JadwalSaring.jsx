@@ -10,7 +10,7 @@ function HariTerbang({ hari, className = '' }) {
   return (
     <p className={`gap-1 ${className}`}>
       <span className="sr-only">Terbang {hari.length === 7 ? 'setiap hari' : `hari ${hari.map((h) => HARI[h - 1]).join(', ')}`}</span>
-      {HARI.map((h, i) => <span key={h} aria-hidden="true" className={`grid h-6 w-9 place-items-center rounded text-[0.625rem] font-bold ${hari.includes(i + 1) ? 'bg-aviation text-sky' : 'bg-sky-2 text-slate-ink/60'}`}>{h}</span>)}
+      {HARI.map((h, i) => <span key={h} aria-hidden="true" className={`grid h-6 w-9 place-items-center rounded text-xs font-bold ${hari.includes(i + 1) ? 'bg-aviation text-sky' : 'bg-sky-2 text-slate-ink/60'}`}>{h}</span>)}
     </p>
   );
 }

@@ -42,16 +42,16 @@ export function SiteFooter() {
         <nav aria-label="Terbang">
           <p className="pass-label mb-4 text-sky/80">Terbang</p>
           <ul className="space-y-1 text-sm text-sky/80">
-            <li><Link href="/jadwal" className="inline-block py-1.5 hover:text-sky">Jadwal & harga</Link></li>
-            <li><Link href="/layanan" className="inline-block py-1.5 hover:text-sky">Tarif, bagasi & layanan khusus</Link></li>
-            <li><Link href="/blog" className="inline-block py-1.5 hover:text-sky">Blog perjalanan</Link></li>
+            <li><Link href="/jadwal" className="inline-flex min-h-11 items-center hover:text-sky">Jadwal & harga</Link></li>
+            <li><Link href="/layanan" className="inline-flex min-h-11 items-center hover:text-sky">Tarif, bagasi & layanan khusus</Link></li>
+            <li><Link href="/blog" className="inline-flex min-h-11 items-center hover:text-sky">Blog perjalanan</Link></li>
           </ul>
         </nav>
         <nav aria-label="Perusahaan">
           <p className="pass-label mb-4 text-sky/80">Perusahaan</p>
           <ul className="space-y-1 text-sm text-sky/80">
-            <li><Link href="/tentang" className="inline-block py-1.5 hover:text-sky">Tentang & armada</Link></li>
-            <li><Link href="/kontak" className="inline-block py-1.5 hover:text-sky">Kontak & bantuan</Link></li>
+            <li><Link href="/tentang" className="inline-flex min-h-11 items-center hover:text-sky">Tentang & armada</Link></li>
+            <li><Link href="/kontak" className="inline-flex min-h-11 items-center hover:text-sky">Kontak & bantuan</Link></li>
           </ul>
         </nav>
       </div>

@@ -38,7 +38,7 @@ export function PapanKeberangkatan() {
             <p className="pass-label text-runway">Keberangkatan · Soekarno-Hatta (CGK)</p>
             <h2 className="mt-3 text-[2.2rem] leading-[1.06] font-extrabold text-sky md:text-5xl">Papan hari Kamis</h2>
           </div>
-          <Link href="/jadwal?dari=CGK" className="pass-label self-start border-b border-sky/40 py-1 text-sky hover:border-sky sm:self-auto">Semua jadwal dari CGK</Link>
+          <Link href="/jadwal?dari=CGK" className="pass-label inline-flex min-h-11 items-center self-start border-b border-sky/40 text-sky hover:border-sky sm:self-auto">Semua jadwal dari CGK</Link>
         </div>
         {/* Ponsel: kolom penerbangan & gerbang dilipat ke bawah nama tujuan, jadi papan muat tanpa digeser. */}
         <div className="mt-8 rounded-xl bg-[#071a33] p-1.5 sm:mt-10 sm:overflow-x-auto sm:p-2" tabIndex={0} role="region" aria-label="Papan keberangkatan CGK">
@@ -110,7 +110,7 @@ export function Tarif() {
             <p className="pass-label text-runway-ink">Tarif · contoh CGK → DPS</p>
             <h2 className="mt-4 max-w-2xl text-[2.2rem] leading-[1.06] font-extrabold text-aviation md:text-5xl">Tiga tarif, isinya tertulis jelas</h2>
           </div>
-          <Link href="/layanan" className="pass-label shrink-0 self-start border-b-2 border-aviation py-1 text-aviation sm:self-auto">Rincian tarif & bagasi</Link>
+          <Link href="/layanan" className="pass-label inline-flex min-h-11 shrink-0 items-center self-start border-b-2 border-aviation text-aviation sm:self-auto">Rincian tarif & bagasi</Link>
         </div>
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
           {TARIF.map((t) => (
@@ -148,7 +148,7 @@ export function TepatWaktu() {
           <ul className="flex h-56 items-end gap-1.5 sm:gap-5" aria-label="Ketepatan waktu per bulan">
             {OTP.map(([b, p]) => (
               <li key={b} className="flex h-full min-w-0 flex-1 flex-col items-center justify-end gap-2">
-                <span className="pass-code text-[0.68rem] text-aviation sm:text-sm">{p.toLocaleString('id-ID')}%</span>
+                <span className="pass-code text-xs text-aviation sm:text-sm">{p.toLocaleString('id-ID')}%</span>
                 <span aria-hidden="true" className="w-full rounded-t-md bg-boarding" style={{ height: `${((p - min) / (100 - min)) * 100}%` }} />
                 <span className="pass-label">{b}</span>
               </li>
@@ -195,7 +195,7 @@ export function BlogTeaser() {
             <p className="pass-label text-runway-ink">Blog</p>
             <h2 className="mt-4 text-[2.2rem] leading-[1.06] font-extrabold text-aviation md:text-5xl">Catatan sebelum terbang</h2>
           </div>
-          <Link href="/blog" className="pass-label shrink-0 self-start border-b-2 border-aviation py-1 text-aviation sm:self-auto">Semua artikel</Link>
+          <Link href="/blog" className="pass-label inline-flex min-h-11 shrink-0 items-center self-start border-b-2 border-aviation text-aviation sm:self-auto">Semua artikel</Link>
         </div>
         <ul className="mt-10 grid gap-6 md:grid-cols-3">
           {tampil.map((p) => (
